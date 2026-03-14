@@ -1,0 +1,38 @@
+id: entur-departures-no
+name: Norway Transport
+desc: Realtime public transport departures for any stop in Norway.
+author: jakobbbb
+summary: Public transport in Norway
+category: Transportation
+filename: entur_departures.star
+type: app
+config:
+  - name: stop_id
+    type: string
+    desc: The Entur stop ID (e.g., NSR:StopPlace:6286 for Colletts gate).
+    required: true
+  - name: quay_id
+    type: string
+    desc: The Entur quay ID (e.g., NSR:Quay:11544 for Colletts gate).
+    required: true
+  - name: stop_name
+    type: string
+    desc: Display name for the stop (optional; will use API name if blank).
+    required: false
+  - name: num_departures
+    type: int
+    desc: Number of departures to show (1-5).
+    default: 3
+    min: 1
+    max: 5
+entrypoint: main
+tags:
+  - transportation
+  - norway
+  - bus
+  - trains
+  - real-time
+  - public-transport
+  - travel
+  - commute
+  - schedule 
